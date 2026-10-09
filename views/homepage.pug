@@ -1,0 +1,23 @@
+
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Cars Collection
+
+    a(href="/update-cobj") Add to this table
+
+    table(border="1")
+      thead
+        tr
+          th Name
+          th Manufacturer
+          th Model
+      tbody
+        each car in data
+          tr
+            td= car.properties.name
+            td= car.properties.manufacturer
+            td= car.properties.model
